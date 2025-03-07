@@ -1,67 +1,96 @@
-<main>
-    <!-- Nesting: Guardar en un "nido", en este caso el <main> 
-    distintos tipos de datos para mayor orden (TAB)-->
-    <h1>Cats Photo App</h1>
-<section>
-    <h2>Cats Photos</h2>
-    <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p>
-    <a href="https://freecatphotoapp.com">
-        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back">
-    </a>
-    <!-- Usar "img src": añadir link de imagen a poner en la web -->
-    <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
-    <!-- Usando "a href": Permite agregar un link al elemento escogido-->
-    <!-- Usar el "target" para abrir una nueva pestaña en lugar de cambiar-->
-</section>
-<section>
-    <h2>Cat Lists</h2>
-    <h3>Things cats love:</h3>
-    <ul>
-        <li>cat nip</li>
-        <li>laser pointers</li>
-        <li>lasagna</li>
-    </ul>
-    <!-- "ul": Lista Desordenada-->
-    <!-- "li": Elemento en la lista-->
-    <figure>
-        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
-        <figcaption>Cats <em>love</em> lasagna</figcaption>
-        <!-- "figcaption": Sirve para poner descripción al elemento o figura-->
-        <!-- "em": Se usa para enfatizar (Cursiva)-->
-         <!-- "alt": Otro nombre para la imagen-->
-    </figure>
-    <!-- "figure": Guardar una figura (Foto, etc)-->
-    <h3>Top 3 things cats hate:</h3>
-    <ol>
-        <li>flea treatment</li>
-        <li>thunder</li>
-        <li>other cats</li>
-    </ol>
-    <figure>
-        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
-        <figcaption> Cats <strong>hate</strong> other cats</figcaption>
-        <!-- "Strong": Negrita-->
-    </figure>
-</section>
-<section>
-    <h2>Cat Form</h2>
-    <form
-          action="https://freecatphotoapp.com/submit-cat-photo"></form>
-          <label> <input id="indoor" type="radio"> Indoor </label>
-            <!-- "label": Asociar el texto de un input con el input en sí (Darle clcick al texto se asocia con el input)-->
-            <!-- "radio": Solo una respuesta entre varias-->
-            <!-- "id": Usado para identificar elementos especificos en HTML-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CatPhotoApp</title>
+    </head>
+    <body>
+        <main>
+        <!-- Nesting: Guardar en un "nido", en este caso el <main> 
+        distintos tipos de datos para mayor orden (TAB)-->
+        <h1>Cats Photo App</h1>
+    <section>
+        <h2>Cats Photos</h2>
+        <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p>
+        <a href="https://freecatphotoapp.com">
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back">
+        </a>
+        <!-- Usar "img src": añadir link de imagen a poner en la web -->
+        <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+        <!-- Usando "a href": Permite agregar un link al elemento escogido-->
+        <!-- Usar el "target" para abrir una nueva pestaña en lugar de cambiar-->
+    </section>
+    <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+        </ul>
+        <!-- "ul": Lista Desordenada-->
+        <!-- "li": Elemento en la lista-->
+        <figure>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+            <figcaption>Cats <em>love</em> lasagna</figcaption>
+            <!-- "figcaption": Sirve para poner descripción al elemento o figura-->
+            <!-- "em": Se usa para enfatizar (Cursiva)-->
+            <!-- "alt": Otro nombre para la imagen-->
+        </figure>
+        <!-- "figure": Guardar una figura (Foto, etc)-->
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+        </ol>
+        <figure>
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+            <figcaption> Cats <strong>hate</strong> other cats</figcaption>
+            <!-- "Strong": Negrita-->
+        </figure>
+    </section>
+    <section>
+        <h2>Cat Form</h2>
+        <form
+            action="https://freecatphotoapp.com/submit-cat-photo"></form>
+            <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+        <!-- "legend": Como su nombre indica es un texto leyenda, ayuda para darle formato a los botones, en este caso una pregunta-->
+            <label> <input checked id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor </label>
+        <!-- "label": Asociar el texto de un input con el input en sí (Darle clcick al texto se asocia con el input)-->
+        <!-- "radio": Solo una respuesta entre varias-->
+        <!-- "id": Usado para identificar elementos especificos en HTML-->
+            <label> <input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor </label>
+            </fieldset>
+            <fieldset>
+                <legend>What's your cat's personality?</legend>
+                <input checked id="loving" type="checkbox" name="personality" value="loving"> <label for="loving">Loving</label>
+                <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+                <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+        <!-- Texto fuera del input es lo que aparece en la web-->
+        <!-- "for": Otra forma de asosiar un texto con el input en si, en lugar de poner Input id type name y value-->
+        <!-- "checked": Si o si tiene que ser seleccionado-->
+            </fieldset>
+        <!-- "fieldset": Sirve como un nest para inputs similares, los agrupa como bloque en una nueva linea-->
+        <!-- Para que 2 "radio botons" cumplan su función, de solo seleccionar uno, deben tener el mismo nombre (name)-->
+        <!-- "value": Valor que toma el elemento seleccionado (en este caso cada boton toma su valor "id")-->
+            <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+            <button type="Submit"></button>
+        </form>
+        <!-- "form": Usado para pedir información al usuario (Email, nombres, etc)-->
+        <!-- "action": Significa donde son mandados los datos del "form"-->
+        <!-- "input": Elemento para recolectar datos de la web "form"-->
+        <!-- "type=": Tipo del elemento-->
+        <!-- "name="": Nombre del Input-->
+        <!-- "placeholder": Que información quieres del usuario-->
+        <!-- "required": Es obligatorio llenar el espacio con info para seguir-->
+        <!-- "button": Añade un boton -->
+    </section>
+        </main>
 
-          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
-          <button type="Submit"></button>
-    </form>
-    <!-- "form": Usado para pedir información al usuario (Email, nombres, etc)-->
-    <!-- "action": Significa donde son mandados los datos del "form"-->
-    <!-- "input": Elemento para recolectar datos de la web "form"-->
-    <!-- "type=": Tipo del elemento-->
-    <!-- "name="": Nombre del Input-->
-    <!-- "placeholder": Que información quieres del usuario-->
-    <!-- "required": Es obligatorio llenar el espacio con info para seguir-->
-    <!-- "button": Añade un boton -->
-</section>
-</main>
+        <footer>
+        <p> No Copyright - <a href="https://www.freecodecamp.org"</a>freeCodeCamp.org</p>
+        </footer>
+    </body>
+</html>
